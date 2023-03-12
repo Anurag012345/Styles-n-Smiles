@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.image {
+  top: 0;
+  position: relative;
+  margin-top: 0px;
+  width: 100%;
+}
+.aboutUsHome {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 30px;
+}
+.aboutUsImg img {
+  width: 400px;
+  height: 400px;
+  margin-left: 50px;
+}
+.aboutUsInfo {
+  text-align: center;
+  margin: 10px 50px;
+  padding: 0px 50px;
+}
+.aboutUsInfo h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.aboutUsInfo p {
+  font-size: 17px;
+}
+@media screen and (max-width: 960px) {
+  .image {
+    width: 100%;
+  }
+}
