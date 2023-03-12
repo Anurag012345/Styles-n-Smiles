@@ -103,6 +103,12 @@
 }
 
 @media (max-width: 600px) {
+  .DisplayFrame {
+    width: 95vw;
+    height: calc(95vw * 0.5625);
+    max-height: 90vh;
+    max-width: calc(90vh * 1.78);
+  }
   .PositionIndicator {
     width: 1vh;
     height: 1vh;
