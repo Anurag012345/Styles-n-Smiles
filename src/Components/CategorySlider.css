@@ -1,0 +1,48 @@
+.product-carousel {
+  width: 100%;
+  display: flex;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+  align-items: center;
+}
+
+.product-container {
+  padding: 0 10px;
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+}
+.leftArrow {
+  position: absolute;
+  left: 1%;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: xx-large;
+  color: #aabbcc;
+  user-select: none;
+  z-index: 2;
+}
+.leftArrow:hover {
+  color: #bbccdd;
+}
+.leftArrow:active {
+  color: #206ebd;
+}
+.rightArrow {
+  position: absolute;
+  right: 1%;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: xx-large;
+  color: #aabbcc;
+  user-select: none;
+  z-index: 2;
+}
+.rightArrow:hover {
+  color: #bbccdd;
+}
+.rightArrow:active {
+  color: #206ebd;
+}

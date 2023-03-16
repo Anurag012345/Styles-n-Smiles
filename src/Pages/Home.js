@@ -4,9 +4,10 @@ import ImageSlider from "../Components/ImageSlider"
 import img1 from "../Images/img1.png"
 import img2 from "../Images/img2.png"
 import img3 from "../Images/img3.png"
+import CategorySlider from "../Components/CategorySlider";
 import aboutUsImg from "../Images/woman-hairdresser-salon.jpg"
 import classes from "./Home.module.css";
-import slider from "../Components/Slider"
+import Footer from "../Components/Footer";
 
 import bleach from "../Images/bleach.jpg"
 import bridal from "../Images/Bridal.jpg"
@@ -19,14 +20,14 @@ import waxing from "../Images/Waxing.jpg"
 
 export default function Home() {
   const services = [
-    { id: 1, img: bleach, name: "Bleach" },
-    { id: 2, img: bridal, name: "Bridal" },
-    { id: 3, img: dten, name: "DTen" },
-    { id: 4, img: facial, name: "Facial" },
-    { id: 5, img: haircutting, name: "Hair Cutting" },
-    { id: 6, img: manicure, name: "Manicure & Paddicure" },
-    { id: 7, img: spa, name: "Spa" },
-    { id: 8, img: waxing, name: "Waxing" },
+    { id: 1, image: bleach, title: "Bleach" },
+    { id: 2, image: bridal, title: "Bridal" },
+    { id: 3, image: dten, title: "DTen" },
+    { id: 4, image: facial, title: "Facial" },
+    { id: 5, image: haircutting, title: "Hair Cutting" },
+    { id: 6, image: manicure, title: "Manicure & Paddicure" },
+    { id: 7, image: spa, title: "Spa" },
+    { id: 8, image: waxing, title: "Waxing" },
 
   ]
   return (
@@ -51,9 +52,15 @@ export default function Home() {
 
             At Styles n' Smiles, we understand that each client is unique and we take the time to listen to your needs and preferences to create a personalized service that meets your expectations. We strive to exceed your expectations with every visit and look forward to welcoming you to our salon.</p>
         </div>
-
       </div>
+      <div className={classes.ourServices}>
+        <h1>Our Service Categories</h1>
+        <div className={classes.slider}>
+          <CategorySlider data={services} />
 
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

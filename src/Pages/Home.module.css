@@ -9,26 +9,26 @@
   width: 100%;
 }
 .aboutUsHome {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   margin: 50px 30px;
 }
 .aboutUsImg img {
-  width: 400px;
-  height: 400px;
-  margin-left: 50px;
+  width: 350px;
+  height: 350px;
+  margin-left: 80px;
 }
 .aboutUsInfo {
   text-align: center;
   margin: 10px 50px;
-  padding: 0px 50px;
+  padding: 0px 20px;
 }
 .aboutUsInfo h3 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
 }
 .aboutUsInfo p {
-  font-size: 17px;
+  font-size: 16px;
 }
 @media screen and (max-width: 960px) {
   .image {
