@@ -1,31 +1,40 @@
 import React from 'react'
-import classes from "./Footer.module.css"
+import "./Footer.css"
 import { Link } from "react-router-dom";
 import { MdPhone } from "react-icons/md";
-export default function Footer() {
+
+function Footer() {
     return (
-        <div className={classes.footer}>
-            <div className={classes.footerLogo}>
+        <footer className="footer">
+            <div className="footer__logo">
                 <Link to="/" className="navbar-logo">
                     Smile <i className="fab fa-typo3" />
                 </Link>
             </div>
-            <div className={classes.ourServices}>
-                <ul>
-                    <li>Bleach</li>
-                    <li>Spa</li>
-                    <li>Message</li>
-                    <li>Waxing</li>
-                    <li>Bridal</li>
-                    <li>Facial</li>
-                    <li>Cutting</li>
-                </ul>
-            </div>
-            <div className={classes.contactUs}>
-                <h4>Get in Touch With Us</h4>
-                <p><MdPhone /> : +91 6396268840 </p>
-            </div>
+            <div className="footer__services">
+                <h3>Our Services</h3>
+                <div className="ourservicescat">
+                    <ul className='mylist'>
+                        <li>Bleach</li>
+                        <li>Spa</li>
+                        <li>Message</li>
+                        <li>Waxing</li>
+                        <li>Bridal</li>
+                        <li>Facial</li>
+                        <li>Cutting</li>
+                    </ul>
+                </div>
 
-        </div>
-    )
+            </div>
+            <div className="footer__contact">
+                <h3>Contact Us</h3>
+                <p>123 Main Street</p>
+                <p>Anytown, USA 12345</p>
+                <p><MdPhone /> (555) 555-5555</p>
+                <p>Email: info@example.com</p>
+            </div>
+        </footer>
+    );
 }
+
+export default Footer;

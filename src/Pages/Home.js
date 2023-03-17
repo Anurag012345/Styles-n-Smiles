@@ -4,7 +4,6 @@ import ImageSlider from "../Components/ImageSlider"
 import img1 from "../Images/img1.png"
 import img2 from "../Images/img2.png"
 import img3 from "../Images/img3.png"
-import CategorySlider from "../Components/CategorySlider";
 import aboutUsImg from "../Images/woman-hairdresser-salon.jpg"
 import classes from "./Home.module.css";
 import Footer from "../Components/Footer";
@@ -17,6 +16,8 @@ import haircutting from "../Images/haircutting.jpg"
 import manicure from "../Images/manicure.jpg"
 import spa from "../Images/spa.jpg"
 import waxing from "../Images/Waxing.jpg"
+
+import ReactCardSlider from '../Components/ReactCardSlider';
 
 export default function Home() {
   const services = [
@@ -54,10 +55,9 @@ export default function Home() {
         </div>
       </div>
       <div className={classes.ourServices}>
-        <h1>Our Service Categories</h1>
+        <h1 className={classes.ourServicesHeading}>Our Service Categories</h1>
         <div className={classes.slider}>
-          <CategorySlider data={services} />
-
+          <ReactCardSlider slides={services} />
         </div>
       </div>
       <Footer />
