@@ -1,0 +1,49 @@
+.footer {
+  background-color: #000000;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 400px 500px 500px;
+}
+
+.footer__logo img {
+  width: 10rem;
+}
+.footer__services {
+  padding-left: 154px;
+}
+.footer__services ul {
+  list-style: none;
+  padding: 0;
+  column-count: 2;
+  column-gap: 10px;
+  margin-right: 160px;
+}
+
+.footer__services li {
+  margin-bottom: 0.5rem;
+  color: white;
+  width: fit-content;
+  /* display: inline; */
+
+  /* text-align: center; */
+}
+
+.footer__services h3 {
+  color: white;
+
+  /* text-align: center; */
+}
+
+.footer__contact h3 {
+  margin-top: 0;
+  color: white;
+  /* text-align: center; */
+}
+.footer__contact {
+  padding-left: 80px;
+}
+.footer__contact p {
+  margin: 0.5rem 0;
+  color: white;
+  /* text-align: center; */
+}
