@@ -2,6 +2,7 @@ import React from 'react'
 import "./Footer.css"
 import { Link } from "react-router-dom";
 import { MdPhone } from "react-icons/md";
+import { IoMdMail } from "react-icons/io";
 
 function Footer() {
     return (
@@ -31,7 +32,7 @@ function Footer() {
                 <p>123 Main Street</p>
                 <p>Anytown, USA 12345</p>
                 <p><MdPhone /> (555) 555-5555</p>
-                <p>Email: info@example.com</p>
+                <p><IoMdMail /> info@example.com</p>
             </div>
         </footer>
     );

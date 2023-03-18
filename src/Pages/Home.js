@@ -7,7 +7,7 @@ import img3 from "../Images/img3.png"
 import aboutUsImg from "../Images/woman-hairdresser-salon.jpg"
 import classes from "./Home.module.css";
 import Footer from "../Components/Footer";
-
+import { Link } from "react-router-dom";
 import bleach from "../Images/bleach.jpg"
 import bridal from "../Images/Bridal.jpg"
 import dten from "../Images/dten.jpg"
@@ -18,6 +18,8 @@ import spa from "../Images/spa.jpg"
 import waxing from "../Images/Waxing.jpg"
 
 import ReactCardSlider from '../Components/ReactCardSlider';
+
+
 
 export default function Home() {
   const services = [
@@ -31,6 +33,8 @@ export default function Home() {
     { id: 8, image: waxing, title: "Waxing" },
 
   ]
+
+
   return (
     <div>
       <NavBar />
@@ -52,6 +56,11 @@ export default function Home() {
             We are committed to creating a warm and welcoming atmosphere where our clients can relax and enjoy a pampering experience. Our salon is equipped with modern facilities and we use only the best products to ensure that you leave feeling rejuvenated and confident.
 
             At Styles n' Smiles, we understand that each client is unique and we take the time to listen to your needs and preferences to create a personalized service that meets your expectations. We strive to exceed your expectations with every visit and look forward to welcoming you to our salon.</p>
+          <button className={classes.aboutUsButton}>
+            <Link to="/" className={classes.aboutUsButton}>
+              Know More
+            </Link>
+          </button>
         </div>
       </div>
       <div className={classes.ourServices}>
@@ -59,6 +68,18 @@ export default function Home() {
         <div className={classes.slider}>
           <ReactCardSlider slides={services} />
         </div>
+      </div>
+      <div className={classes.bestSeller}>
+        <h1 className={classes.bestSellerHeading}> Our Bestseller Services & Products</h1>
+        <div className={classes.bestSellerSlider}>
+          <ReactCardSlider slides={services} />
+        </div>
+      </div>
+      <div className={classes.contactUs}>
+        <div className={classes.Map}>
+
+        </div>
+        <div className={classes.info}></div>
       </div>
       <Footer />
     </div>
