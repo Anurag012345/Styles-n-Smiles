@@ -27,17 +27,43 @@
   font-size: 30px;
   font-weight: 600;
 }
+.aboutUsButton {
+  background-color: black;
+  color: white;
+  padding: 6px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px;
+}
+.aboutUsButton:hover {
+  color: pink;
+  text-decoration: none;
+  transform: scale(1.1);
+}
 .aboutUsInfo p {
   font-size: 16px;
 }
-.ourServicesHeading {
+.ourServices,
+.bestSeller {
+  margin: 30px 10px;
+  padding: 30px 10px;
+}
+.ourServicesHeading,
+.bestSellerHeading {
   text-align: center;
   font-size: 32px;
   font-weight: 600;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
-
+.contactUs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 50px;
+  padding: 15px;
+  grid-column-gap: 10px;
+}
 @media screen and (max-width: 960px) {
   .image {
     width: 100%;
