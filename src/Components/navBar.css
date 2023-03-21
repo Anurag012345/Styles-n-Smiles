@@ -63,6 +63,7 @@
   color: pink;
   border-bottom: 2px solid pink;
   transition: all 0.2s ease-out;
+  text-decoration: none;
 }
 
 .fa-bars {
