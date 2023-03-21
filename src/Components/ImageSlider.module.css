@@ -77,14 +77,14 @@
   max-width: calc(90vh * 1.78);
   justify-content: center;
   display: flex;
-  margin: 0.5% auto;
+  margin: 0 auto;
   user-select: none;
 }
 
 .PositionIndicator {
   box-sizing: border-box;
-  width: 0.5vw;
-  height: 0.5vw;
+  width: 0.7vw;
+  height: 0.7vw;
   border: 1px solid #aabbcc;
   border-radius: 50%;
   margin: 2px;

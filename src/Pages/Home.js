@@ -45,6 +45,12 @@ export default function Home() {
           <img src={img3} alt="" />
         </ImageSlider>
       </div>
+      <div className={classes.ourServices}>
+        <h1 className={classes.ourServicesHeading}>Our Service Categories</h1>
+        <div className={classes.slider}>
+          <ReactCardSlider slides={services} />
+        </div>
+      </div>
       <div className={classes.aboutUsHome}>
         <div className={classes.aboutUsImg}>
           <img src={aboutUsImg} alt="" />
@@ -57,18 +63,13 @@ export default function Home() {
 
             At Styles n' Smiles, we understand that each client is unique and we take the time to listen to your needs and preferences to create a personalized service that meets your expectations. We strive to exceed your expectations with every visit and look forward to welcoming you to our salon.</p>
           <button className={classes.aboutUsButton}>
-            <Link to="/" className={classes.aboutUsButton}>
+            <Link to="/aboutUs" className={classes.aboutUsButton}>
               Know More
             </Link>
           </button>
         </div>
       </div>
-      <div className={classes.ourServices}>
-        <h1 className={classes.ourServicesHeading}>Our Service Categories</h1>
-        <div className={classes.slider}>
-          <ReactCardSlider slides={services} />
-        </div>
-      </div>
+
       <div className={classes.bestSeller}>
         <h1 className={classes.bestSellerHeading}> Our Bestseller Services & Products</h1>
         <div className={classes.bestSellerSlider}>
