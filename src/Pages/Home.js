@@ -16,10 +16,10 @@ import haircutting from "../Images/haircutting.jpg"
 import manicure from "../Images/manicure.jpg"
 import spa from "../Images/spa.jpg"
 import waxing from "../Images/Waxing.jpg"
-
+import Testimonial from "../Components/Testimonial";
 import ReactCardSlider from '../Components/ReactCardSlider';
 
-
+import pic1 from "../Images/kohli.jpg"
 
 export default function Home() {
   const services = [
@@ -33,6 +33,17 @@ export default function Home() {
     { id: 8, image: waxing, title: "Waxing" },
 
   ]
+
+  const testimonialsData = [
+    { id: 1, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
+    { id: 2, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
+    { id: 3, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
+    { id: 4, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
+    { id: 5, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
+    { id: 6, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
+
+  ]
+
 
 
   return (
@@ -75,6 +86,10 @@ export default function Home() {
         <div className={classes.bestSellerSlider}>
           <ReactCardSlider slides={services} />
         </div>
+      </div>
+      <div className={classes.testimonials}>
+        <h1 className={classes.testimonialHeading}>Testimonials</h1>
+        <Testimonial data={testimonialsData} />
       </div>
       <div className={classes.contactUs}>
         <div className={classes.Map}>

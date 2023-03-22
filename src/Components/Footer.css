@@ -14,9 +14,7 @@
 .footer__services ul {
   list-style: none;
   padding: 0;
-  column-count: 2;
-  column-gap: 10px;
-  margin-right: 160px;
+  margin-left: 20px;
 }
 
 .footer__services li {
