@@ -21,7 +21,7 @@ const ReactCardSlider = (props) => {
                         return (
                             <div className="slider-card" key={index} onClick={() => slide.clickEvent()}>
                                 <div className="slider-card-image" style={{ backgroundImage: `url(${slide.image})`, backgroundSize: 'cover' }}></div>
-                                <div class="overlay">
+                                <div className="overlay">
                                     <p className="slider-card-title">{slide.title}</p>
                                     <p className="slider-card-description">{slide.description}</p>
                                 </div>

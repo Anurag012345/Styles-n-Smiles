@@ -1,8 +1,9 @@
 import React from 'react'
 import "./Footer.css"
 import { Link } from "react-router-dom";
-import { MdPhone } from "react-icons/md";
-import { IoMdMail } from "react-icons/io";
+import { IoLocationSharp } from "react-icons/io5";
+import { AiOutlineMail } from "react-icons/ai";
+import { BsTelephone } from "react-icons/bs";
 
 function Footer() {
     return (
@@ -29,10 +30,15 @@ function Footer() {
             </div>
             <div className="footer__contact">
                 <h3>Contact Us</h3>
-                <p>123 Main Street</p>
-                <p>Anytown, USA 12345</p>
-                <p><MdPhone /> (555) 555-5555</p>
-                <p><IoMdMail /> info@example.com</p>
+                <div className="information">
+                    <p><IoLocationSharp /> Beauty Care,Gulabrai,Rudraprayag</p>
+                </div>
+                <div className="information">
+                    <p><AiOutlineMail /> poojasemwal199631@gmail.com</p>
+                </div>
+                <div className="information">
+                    <p> <BsTelephone /> +91 7060467247</p>
+                </div>
             </div>
         </footer>
     );

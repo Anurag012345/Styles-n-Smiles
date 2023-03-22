@@ -305,11 +305,12 @@ textarea.input {
 
 .square {
   position: absolute;
-  height: 400px;
+  height: 300px;
   top: 50%;
-  left: 50%;
+  left: 60%;
   transform: translate(181%, 11%);
   opacity: 0.2;
+  overflow: hidden;
 }
 
 @media (max-width: 850px) {
