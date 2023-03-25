@@ -13,17 +13,72 @@ function Footer() {
                     Smile <i className="fab fa-typo3" />
                 </Link>
             </div>
+            <div className="footer__menu">
+                <h3>Navigate</h3>
+                <div className="my_menu">
+                    <ul>
+                        <li className='menu-item'>
+                            <Link to="/" className="footer-nav-links" >
+                                Home
+                            </Link>
+                        </li>
+                        <li className="menu-item">
+                            <Link to="/aboutUs" className="footer-nav-links" >
+                                About Us
+                            </Link>
+                        </li>
+                        <li className="menu-item">
+                            <Link to="/" className="footer-nav-links" >
+                                Services
+                            </Link>
+                        </li>
+                        <li className="menu-item">
+                            <Link to="/contactUs" className="footer-nav-links" >
+                                Contact Us
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div className="footer__services">
                 <h3>Our Services</h3>
                 <div className="ourservicescat">
                     <ul className='mylist'>
-                        <li>Bleach</li>
-                        <li>Spa</li>
-                        <li>Message</li>
-                        <li>Waxing</li>
-                        <li>Bridal</li>
-                        <li>Facial</li>
-                        <li>Cutting</li>
+                        <li className='menu-item'>
+                            <Link to="/" className="footer-nav-links" >
+                                Bleach
+                            </Link>
+                        </li>
+                        <li className="menu-item">
+                            <Link to="/aboutUs" className="footer-nav-links" >
+                                Spa
+                            </Link>
+                        </li>
+                        <li className="menu-item">
+                            <Link to="/" className="footer-nav-links" >
+                                Message
+                            </Link>
+                        </li>
+                        <li className="menu-item">
+                            <Link to="/contactUs" className="footer-nav-links" >
+                                Waxing
+                            </Link>
+                        </li>
+                        <li className="menu-item">
+                            <Link to="/" className="footer-nav-links" >
+                                Bridal
+                            </Link>
+                        </li>
+                        <li className="menu-item">
+                            <Link to="/contactUs" className="footer-nav-links" >
+                                Facial
+                            </Link>
+                        </li>
+                        <li className="menu-item">
+                            <Link to="/contactUs" className="footer-nav-links" >
+                                Cutting
+                            </Link>
+                        </li>
                     </ul>
                 </div>
 
