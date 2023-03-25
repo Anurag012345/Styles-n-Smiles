@@ -3,10 +3,30 @@ import "./navBar.css";
 import { Link } from "react-router-dom";
 export default function NavBar(props) {
   const [click, setClick] = useState(false);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
 
   const handleClick = () => {
     setClick(!click);
   };
+
+  const subMenuItems = [
+    {
+      title: "Hair Care",
+      link: "/services/haircare"
+    },
+    {
+      title: "Skin Care",
+      link: "/services/skincare"
+    },
+    {
+      title: "Body Care",
+      link: "/services/bodycare"
+    },
+    {
+      title: "Bridal",
+      link: "/services/bridal"
+    }
+  ];
 
   const closeMobileMenu = () => setClick(false);
   return (
@@ -30,11 +50,24 @@ export default function NavBar(props) {
                 About Us
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/services" className="nav-links" onClick={closeMobileMenu}>
-                Services
+            <li className="nav-item" onClick={() => setSubMenuOpen(!subMenuOpen)}>
+              <Link to="" className="nav-links">
+                Services &nbsp; <i className="fas fa-caret-down" />
               </Link>
+              {subMenuOpen && (
+                <ul className="sub-menu" >
+                  {subMenuItems.map((item, index) => (
+                    <li key={index} className="nav-sub-item">
+                      <Link to={item.link} className="nav-links" onClick={closeMobileMenu}>
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
             </li>
+
             <li className="nav-item">
               <Link to="/contactUs" className="nav-links" onClick={closeMobileMenu}>
                 Contact Us

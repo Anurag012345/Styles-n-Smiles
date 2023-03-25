@@ -1,13 +1,18 @@
 import React from 'react'
 import classes from "./Services.module.css"
+import NavBar from '../Components/navBar'
+import Footer from '../Components/Footer'
 import facewash from "../Images/face-wash.jpg"
 import facemask from "../Images/face-mask.jpg"
 import facial from "../Images/facial.jpg"
-import dten from "./Images/dten.jpg"
+import dten from "../Images/dten.jpg"
 const SkinCare = () => {
     return (
         <div>
             <NavBar />
+            <div className={classes.mainHeading}>
+                <h1 className={classes.mainHeading}>Skin Care Services</h1>
+            </div>
             <div className={classes.services}>
                 <div className={classes.left}>
                     <img src={facewash} alt="" />
