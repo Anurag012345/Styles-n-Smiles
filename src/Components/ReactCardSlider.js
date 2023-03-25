@@ -1,6 +1,7 @@
 import React from 'react';
 import './Slider.css';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+
 const ReactCardSlider = (props) => {
     const slideLeft = () => {
         var slider = document.getElementById("slider");
