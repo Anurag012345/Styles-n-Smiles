@@ -11,6 +11,9 @@ const Services = () => {
     return (
         <div>
             <NavBar />
+            <div className={classes.mainHeading}>
+                <h1 className={classes.mainHeading}>Hair Care Services</h1>
+            </div>
             <div className={classes.services}>
                 <div className={classes.left}>
                     <img src={haircut} alt="" />

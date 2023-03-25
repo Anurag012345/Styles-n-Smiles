@@ -5,6 +5,8 @@ import ErrorPage from "./Pages/ErrorPage";
 import AboutUs from "./Pages/AboutUs";
 import ContactUs from "./Pages/ContactUs";
 import Services from "./Pages/Services";
+import SkinCare from "./Pages/SkinCare";
+import BodyCare from "./Pages/BodyCare"
 function App() {
   return (
     <div className="App">
@@ -13,7 +15,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/services/haircare" element={<Services />} />
+          <Route path="/services/skincare" element={<SkinCare />} />
+          <Route path="/services/bodycare" element={<BodyCare />} />
+          <Route path="/services/bodycare" element={<Services />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
