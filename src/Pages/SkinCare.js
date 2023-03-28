@@ -30,9 +30,7 @@ const SkinCare = () => {
             <div className={classes.services}>
                 <div className={classes.left}>
                     <h2 className={classes.Heading}>Facial</h2>
-                    <p className={classes.content}>A facial adds the ‘value’ in ‘face value’! <br />
-
-                        <br /> A facial is not just about pampering yourself, it also does wonders for your skin! A facial done by a professional, deep cleans and hydrates your skin as well as relieves acne. A good facial also improves blood circulation, giving your skin a healthy glow. <br />
+                    <p className={classes.content}>A facial is not just about pampering yourself, it also does wonders for your skin! A facial done by a professional, deep cleans and hydrates your skin as well as relieves acne. A good facial also improves blood circulation, giving your skin a healthy glow. <br />
 
                         <br /> At Styles n' Smiles, our facial options cater to all skin types. We use products containing vital minerals and nutrients that reduce wrinkles and remove dead skin, giving your skin a youthful appearance. Black mud, fruit acids, vitamins, enzymes, gold and anti-oxidants are just a few of the special ingredients found in our facials.</p>
                     <button>View Price</button>

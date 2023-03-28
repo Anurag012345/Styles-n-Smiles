@@ -34,8 +34,8 @@
 }
 .footer__services ul {
   list-style: none;
-  column-count: 2;
   padding: 0;
+  margin-left: 110px;
 }
 
 .footer__services li {
