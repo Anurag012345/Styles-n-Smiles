@@ -28,10 +28,18 @@
   padding: 50px;
   margin-right: 60px;
 }
+.whoWeAre {
+  font-size: 16px;
+}
 .aboutUsHeading {
   text-align: center;
   font-size: 25px;
   font-weight: 600;
+}
+.knowOurTeam {
+  margin: 50px;
+  background-color: rgb(236, 236, 238);
+  padding: 80px 20px;
 }
 .knowOurTeamHeading {
   text-align: center;

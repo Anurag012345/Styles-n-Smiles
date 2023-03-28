@@ -31,6 +31,7 @@
 }
 .star-rating {
   display: inline-block;
+  margin-top: -5px;
 }
 
 .star {
@@ -41,5 +42,5 @@
 }
 
 .star.yellow {
-  color: #ffdf00;
+  color: #ffdd00e4;
 }

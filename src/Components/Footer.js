@@ -46,39 +46,25 @@ function Footer() {
                     <ul className='mylist'>
                         <li className='menu-item'>
                             <Link to="/" className="footer-nav-links" >
-                                Bleach
+                                Hair Care
                             </Link>
                         </li>
                         <li className="menu-item">
                             <Link to="/aboutUs" className="footer-nav-links" >
-                                Spa
+                                Skin Care
                             </Link>
                         </li>
                         <li className="menu-item">
                             <Link to="/" className="footer-nav-links" >
-                                Message
+                                Body Care
                             </Link>
                         </li>
                         <li className="menu-item">
                             <Link to="/contactUs" className="footer-nav-links" >
-                                Waxing
+                                Bridal Services
                             </Link>
                         </li>
-                        <li className="menu-item">
-                            <Link to="/" className="footer-nav-links" >
-                                Bridal
-                            </Link>
-                        </li>
-                        <li className="menu-item">
-                            <Link to="/contactUs" className="footer-nav-links" >
-                                Facial
-                            </Link>
-                        </li>
-                        <li className="menu-item">
-                            <Link to="/contactUs" className="footer-nav-links" >
-                                Cutting
-                            </Link>
-                        </li>
+
                     </ul>
                 </div>
 

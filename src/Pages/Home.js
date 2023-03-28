@@ -20,6 +20,8 @@ import Testimonial from "../Components/Testimonial";
 import ReactCardSlider from '../Components/ReactCardSlider';
 
 import pic1 from "../Images/kohli.jpg"
+import booking from "../Images/Book-Appointment.jpg"
+import Appointment from "../Components/Appointment";
 
 export default function Home() {
   const services = [
@@ -68,7 +70,7 @@ export default function Home() {
         </div>
         <div className={classes.aboutUsInfo}>
           <h3>About Us</h3>
-          <p>At Styles n' Smiles, we believe that everyone deserves to look and feel their best. Our team of experienced stylists and beauty experts are dedicated to providing top-quality services and treatments to help you achieve your desired look. Whether you're looking for a fresh new haircut, a relaxing facial, or a bold new hair color, we have the expertise and the latest tools and techniques to bring your vision to life.
+          <p className={classes.info}>At Styles n' Smiles, we believe that everyone deserves to look and feel their best. Our team of experienced stylists and beauty experts are dedicated to providing top-quality services and treatments to help you achieve your desired look. Whether you're looking for a fresh new haircut, a relaxing facial, or a bold new hair color, we have the expertise and the latest tools and techniques to bring your vision to life.
 
             We are committed to creating a warm and welcoming atmosphere where our clients can relax and enjoy a pampering experience. Our salon is equipped with modern facilities and we use only the best products to ensure that you leave feeling rejuvenated and confident.
 
@@ -87,16 +89,19 @@ export default function Home() {
           <ReactCardSlider slides={services} />
         </div>
       </div>
+      <div className={classes.AppointmentDiv}>
+        <div className={classes.Appointmentimage}>
+          <img src={booking} alt="" />
+        </div>
+        <div className={classes.Appointment}>
+          <Appointment />
+        </div>
+      </div>
       <div className={classes.testimonials}>
         <h1 className={classes.testimonialHeading}>Testimonials</h1>
         <Testimonial data={testimonialsData} />
       </div>
-      <div className={classes.contactUs}>
-        <div className={classes.Map}>
 
-        </div>
-        <div className={classes.info}></div>
-      </div>
       <Footer />
     </div>
   );

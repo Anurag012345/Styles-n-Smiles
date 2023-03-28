@@ -23,9 +23,7 @@ const BodyCare = () => {
 
                         <br /> The Radiant Manicure is an excellent way to whiten dull or tanned skin. Get rid of unevenly tanned skin with this special manicure. <br />
 
-                        <br /> The Intense Moisturizing Manicure is recommended for dry hands. Soak your hands in a special moisturising mixture for soft, beautiful hands. <br />
-
-                        <br /> For hands that feel Naturally soft!</p>
+                        <br /> The Intense Moisturizing Manicure is recommended for dry hands. Soak your hands in a special moisturising mixture for soft, beautiful hands. For hands that feel Naturally soft!</p>
                     <button>View Price</button>
                 </div>
             </div>
