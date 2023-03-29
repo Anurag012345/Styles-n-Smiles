@@ -39,13 +39,13 @@ const ContactUs = () => {
                         </p>
                         <div className="info">
                             <div className="information">
-                                <p><GrLocation /> Beauty Care,Gulabrai,Rudraprayag</p>
+                                <p><GrLocation /> Styles n' Smiles</p>
                             </div>
                             <div className="information">
-                                <p><AiOutlineMail /> poojasemwal199631@gmail.com</p>
+                                <p><AiOutlineMail /> help@styles.com</p>
                             </div>
                             <div className="information">
-                                <p> <BsTelephone /> +91 7060467247</p>
+                                <p> <BsTelephone /> +91 6396268840 </p>
                             </div>
                         </div>
 
@@ -71,7 +71,7 @@ const ContactUs = () => {
                         <span className="circle one"></span>
                         <span className="circle two"></span>
 
-                        <form action="index.html" autoComplete={false}>
+                        <form action="index.html" autoComplete="false">
                             <h3 className="title">Contact us</h3>
                             <div className="input-container">
                                 <input type="text" name="name" className="input" />

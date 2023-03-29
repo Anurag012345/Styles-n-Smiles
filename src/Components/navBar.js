@@ -67,7 +67,11 @@ export default function NavBar(props) {
               )}
 
             </li>
-
+            <li className="nav-item">
+              <Link to="/price" className="nav-links" onClick={closeMobileMenu}>
+                Prices
+              </Link>
+            </li>
             <li className="nav-item">
               <Link to="/contactUs" className="nav-links" onClick={closeMobileMenu}>
                 Contact Us

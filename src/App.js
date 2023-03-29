@@ -7,6 +7,7 @@ import ContactUs from "./Pages/ContactUs";
 import Services from "./Pages/Services";
 import SkinCare from "./Pages/SkinCare";
 import BodyCare from "./Pages/BodyCare"
+import Price from "./Pages/Prices"
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
           <Route path="/services/skincare" element={<SkinCare />} />
           <Route path="/services/bodycare" element={<BodyCare />} />
           <Route path="/services/bodycare" element={<Services />} />
+          <Route path="/price" element={<Price />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>

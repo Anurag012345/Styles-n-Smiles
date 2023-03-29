@@ -72,11 +72,14 @@ p {
   z-index: 5;
   margin-top: -160px;
 }
+.bestSellerSlider {
+  margin-top: -200px;
+}
 .testimonials {
   margin-top: 160px;
   margin-bottom: 30px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .testimonialHeading {
   text-align: center;

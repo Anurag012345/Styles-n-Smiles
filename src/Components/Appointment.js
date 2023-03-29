@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import classes from "./Appointment.module.css"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+
 const Appointment = () => {
     const [date, setDate] = useState(new Date());
     return (
