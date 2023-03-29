@@ -38,11 +38,11 @@
 }
 
 .swiper-button-prev {
-  left: 5 px;
+  left: 10 px;
 }
 
 .swiper-button-next {
-  right: 5 px;
+  right: 10 px;
 }
 
 .swiper-button-prev:hover,

@@ -110,6 +110,7 @@ const Testimonial = () => {
                 keyboard={true}
                 modules={[Navigation, Mousewheel, Keyboard]}
                 className="mySwiper"
+
             >
                 {data.map(user => (
                     <SwiperSlide key={user.id} className="slide">

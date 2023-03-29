@@ -21,6 +21,7 @@ import ReactCardSlider from '../Components/ReactCardSlider';
 
 import pic1 from "../Images/kohli.jpg"
 import booking from "../Images/Book-Appointment.jpg"
+import ProductSlider from "../Components/ProductSlider";
 import Appointment from "../Components/Appointment";
 
 export default function Home() {
@@ -84,9 +85,9 @@ export default function Home() {
       </div>
 
       <div className={classes.bestSeller}>
-        <h1 className={classes.bestSellerHeading}> Our Bestseller Services & Products</h1>
+        <h1 className={classes.bestSellerHeading}> Our Bestseller Products</h1>
         <div className={classes.bestSellerSlider}>
-          <ReactCardSlider slides={services} />
+          <ProductSlider />
         </div>
       </div>
       <div className={classes.AppointmentDiv}>

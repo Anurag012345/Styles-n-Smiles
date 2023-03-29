@@ -10,7 +10,7 @@ import "./ProductSlider.css";
 // import required modules
 import { Navigation, Mousewheel, Keyboard } from "swiper";
 
-import pic1 from "../Images/lipstick.jpeg"
+import pic1 from "../Images/lipstrick.jpeg"
 import pic2 from "../Images/mascara.jpeg"
 import pic3 from "../Images/eye-pallet-shadow.jpeg"
 import pic4 from "../Images/foundation.jpeg"
@@ -23,64 +23,64 @@ import pic10 from "../Images/body-lotion.jpeg"
 import ProductSliderCard from "./ProductSliderCard";
 
 const Products = [{
-    "id": 1,
-    "image": "https://example.com/images/lipstick.jpg",
-    "name": "Lipstick",
-    "price": 299
+    id: 1,
+    image: pic1,
+    name: "Lipstick",
+    price: 299
 },
 {
-    "id": 2,
-    "image": "https://example.com/images/mascara.jpg",
-    "name": "Mascara",
-    "price": 199
+    id: 2,
+    image: pic2,
+    name: "Mascara",
+    price: 199
 },
 {
-    "id": 3,
-    "image": "https://example.com/images/eyeshadow-palette.jpg",
-    "name": "Eyeshadow Palette",
-    "price": 499
+    id: 3,
+    image: pic3,
+    name: "Eyeshadow Palette",
+    price: 499
 },
 {
-    "id": 4,
-    "image": "https://example.com/images/foundation.jpg",
-    "name": "Foundation",
-    "price": 599
+    id: 4,
+    image: pic4,
+    name: "Foundation",
+    price: 599
 },
 {
-    "id": 5,
-    "image": "https://example.com/images/blush.jpg",
-    "name": "Blush",
-    "price": 149
+    id: 5,
+    image: pic5,
+    name: "Blush",
+    price: 149
 },
 {
-    "id": 6,
-    "image": "https://example.com/images/eyeliner.jpg",
-    "name": "Eyeliner",
-    "price": 99
+    id: 6,
+    image: pic6,
+    name: "Eyeliner",
+    price: 99
 },
 {
-    "id": 7,
-    "image": "https://example.com/images/hair-oil.jpg",
-    "name": "Hair Oil",
-    "price": 250
+    id: 7,
+    image: pic7,
+    name: "Hair Oil",
+    price: 250
 },
 {
-    "id": 8,
-    "image": "https://example.com/images/hair-spray.jpg",
-    "name": "Hair Spray",
-    "price": 750
+    id: 8,
+    image: pic8,
+    name: "Hair Spray",
+    price: 750
 },
 {
-    "id": 9,
-    "image": "https://example.com/images/perfume.jpg",
-    "name": "Perfume",
-    "price": 450
+    id: 9,
+    image: pic9,
+    name: "Perfume",
+    price: 450
 },
 {
-    "id": 10,
-    "image": "https://example.com/images/body-lotion.jpg",
-    "name": "Body Lotion",
-    "price": 550
+    id: 10,
+    image: pic10,
+    name: "Body Lotion",
+    price: 550
 }
 ]
 
@@ -88,10 +88,10 @@ const Products = [{
 
 const ProductSlider = () => {
     return (
-        <div>
+        <div className="slider-div">
             <Swiper
                 cssMode={true}
-                slidesPerView={3}
+                slidesPerView={4}
                 navigation={true}
                 mousewheel={true}
                 keyboard={true}
