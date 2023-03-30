@@ -33,6 +33,11 @@ function Footer() {
                             </Link>
                         </li>
                         <li className="menu-item">
+                            <Link to="/price" className="footer-nav-links" >
+                                Price
+                            </Link>
+                        </li>
+                        <li className="menu-item">
                             <Link to="/contactUs" className="footer-nav-links" >
                                 Contact Us
                             </Link>
@@ -72,13 +77,13 @@ function Footer() {
             <div className="footer__contact">
                 <h3>Contact Us</h3>
                 <div className="information">
-                    <p><IoLocationSharp /> Beauty Care,Gulabrai,Rudraprayag</p>
+                    <p><IoLocationSharp /> Styles n' Smiles, Clock Tower, Dehradun</p>
                 </div>
                 <div className="information">
-                    <p><AiOutlineMail /> poojasemwal199631@gmail.com</p>
+                    <p><AiOutlineMail /> contact@styles.com</p>
                 </div>
                 <div className="information">
-                    <p> <BsTelephone /> +91 7060467247</p>
+                    <p> <BsTelephone /> +91 6396268840</p>
                 </div>
             </div>
         </footer>

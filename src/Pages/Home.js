@@ -1,10 +1,9 @@
 import React from "react";
 import NavBar from "../Components/navBar";
 import ImageSlider from "../Components/ImageSlider"
-import img1 from "../Images/img1.png"
-import img2 from "../Images/img2.png"
-import img3 from "../Images/img3.png"
-import aboutUsImg from "../Images/woman-hairdresser-salon.jpg"
+import img1 from "../Images/img1.jpg"
+import img2 from "../Images/img2.jpg"
+import img3 from "../Images/img3.jpg"
 import classes from "./Home.module.css";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
@@ -19,7 +18,7 @@ import waxing from "../Images/Waxing.jpg"
 import Testimonial from "../Components/Testimonial";
 import ReactCardSlider from '../Components/ReactCardSlider';
 
-import pic1 from "../Images/kohli.jpg"
+import pic1 from "../Images/Bridal1.jpg"
 import booking from "../Images/Book-Appointment.jpg"
 import ProductSlider from "../Components/ProductSlider";
 import Appointment from "../Components/Appointment";
@@ -36,18 +35,6 @@ export default function Home() {
     { id: 8, image: waxing, title: "Waxing" },
 
   ]
-
-  const testimonialsData = [
-    { id: 1, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
-    { id: 2, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
-    { id: 3, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
-    { id: 4, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
-    { id: 5, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
-    { id: 6, image: pic1, title: "Virat Kholi", description: "He is a very good cricketer", rating: 5 },
-
-  ]
-
-
 
   return (
     <div>
@@ -67,10 +54,10 @@ export default function Home() {
       </div>
       <div className={classes.aboutUsHome}>
         <div className={classes.aboutUsImg}>
-          <img src={aboutUsImg} alt="" />
+          <img src={pic1} alt="" />
         </div>
         <div className={classes.aboutUsInfo}>
-          <h3>About Us</h3>
+          <h3 className={classes.infoHeading}>About Us</h3>
           <p className={classes.info}>At Styles n' Smiles, we believe that everyone deserves to look and feel their best. Our team of experienced stylists and beauty experts are dedicated to providing top-quality services and treatments to help you achieve your desired look. Whether you're looking for a fresh new haircut, a relaxing facial, or a bold new hair color, we have the expertise and the latest tools and techniques to bring your vision to life.
 
             We are committed to creating a warm and welcoming atmosphere where our clients can relax and enjoy a pampering experience. Our salon is equipped with modern facilities and we use only the best products to ensure that you leave feeling rejuvenated and confident.
@@ -100,7 +87,7 @@ export default function Home() {
       </div>
       <div className={classes.testimonials}>
         <h1 className={classes.testimonialHeading}>Testimonials</h1>
-        <Testimonial data={testimonialsData} />
+        <Testimonial />
       </div>
 
       <Footer />

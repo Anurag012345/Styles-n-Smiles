@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./navBar.css";
-import { Link } from "react-router-dom";
-export default function NavBar(props) {
+import { Link, useNavigate } from "react-router-dom";
+export default function NavBar() {
   const [click, setClick] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
+  const [button, setButton] = useState(true)
 
+  const navigate = useNavigate();
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false)
+    } else {
+      setButton(true)
+    }
+  }
+  useEffect(() => {
+    showButton();
+  }, [])
+  window.addEventListener('resize', showButton)
   const handleClick = () => {
     setClick(!click);
   };
@@ -77,7 +90,15 @@ export default function NavBar(props) {
                 Contact Us
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/login" className="nav-links-mobile" onClick={closeMobileMenu}>
+                Sign-up
+              </Link>
+            </li>
           </ul>
+          {button && <button className="button" onClick={() => navigate("/login")}>
+            Login
+          </button>}
         </div>
       </nav>
     </>

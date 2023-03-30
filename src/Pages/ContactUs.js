@@ -39,10 +39,10 @@ const ContactUs = () => {
                         </p>
                         <div className="info">
                             <div className="information">
-                                <p><GrLocation /> Styles n' Smiles</p>
+                                <p><GrLocation /> Styles n' Smiles, Clock Tower, Dehradun</p>
                             </div>
                             <div className="information">
-                                <p><AiOutlineMail /> help@styles.com</p>
+                                <p><AiOutlineMail /> contact@styles.com</p>
                             </div>
                             <div className="information">
                                 <p> <BsTelephone /> +91 6396268840 </p>
