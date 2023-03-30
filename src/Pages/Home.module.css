@@ -19,7 +19,7 @@ p {
 }
 .aboutUsImg img {
   width: 350px;
-  height: 350px;
+  height: auto;
   margin-left: 80px;
   margin-top: 30px;
 }
@@ -28,12 +28,13 @@ p {
   margin: 10px 50px;
   padding: 0px 20px;
 }
-.info {
-  font-size: 18px;
-}
-.aboutUsInfo h3 {
+.infoHeading {
+  margin-top: 35px;
   font-size: 30px;
   font-weight: 600;
+}
+.info {
+  font-size: 18px;
 }
 .aboutUsButton {
   background-color: black;

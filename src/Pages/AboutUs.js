@@ -2,10 +2,10 @@ import React from 'react'
 import classes from "./AboutUs.module.css"
 import NavBar from "../Components/navBar"
 import aboutUsImg from "../Images/woman-hairdresser-salon.jpg"
-import Card from "../Components/Card"
-import pic1 from "../Images/kohli.jpg"
-import pic2 from "../Images/anushka.jpeg"
 import Footer from "../Components/Footer"
+import pic1 from "../Images/Anu.jpg"
+import pic2 from "../Images/Deepika.jpg"
+import pic3 from "../Images/Pooja.jpg"
 export default function AboutUs() {
 
     return (
@@ -31,18 +31,37 @@ export default function AboutUs() {
                 </div>
             </div>
             <div className={classes.knowOurTeam}>
-                <h2 className={classes.knowOurTeamHeading}>Know Our Team</h2>
-                <div className={classes.ourTeam}>
-                    <div className={classes.teamMember}>
-                        <Card img={pic1} title={"Owner"} info={"He is very Good Cricketer"} />
+                <h3 className={classes.knowOurTeamHeading}> Know Our Team</h3>
+                <div className={classes.gridContainer}>
+                    <div className={classes.gridItem}>
+                        <img src={pic3} className={classes.teamImages} alt="Person 1" />
+                        <div className={classes.overlay}>
+                            <p className={classes.title}>Pooja Semwal</p>
+                            <p className={classes.discription}>Hair Specilist</p>
+                        </div>
                     </div>
-                    <div className={classes.teamMember}>
-                        <Card img={pic2} title={"Co-Owner"} info={"She is very Good Actress ans Virat's Wife"} />
+                    <div className={classes.gridItem}>
+                        <img src={pic1} className={classes.teamImages} alt="Person 2" />
+                        <div className={classes.overlay}>
+                            <p className={classes.title}>Anu Bisht</p>
+                            <p className={classes.discription}>Bridal Artist</p>
+                        </div>
                     </div>
-                    <div className={classes.teamMember}>
-                        <Card img={pic2} title={"Co-Owner"} info={"She is very Good Actress ans Virat's Wife"} />
+                    <div className={classes.gridItem}>
+                        <img src={pic2} className={classes.teamImages} alt="Person 3" />
+                        <div className={classes.overlay}>
+                            <p className={classes.title}>Deepika rana</p>
+                            <p className={classes.discription}>Bridal Artist</p>
+                        </div>
                     </div>
+                    {/* <div className={classes.gridItem}>
+                        <div className={classes.overlay}>
+                            <img src="https://example.com/image4.jpg" alt="Person 4" />
+                            <div className={classes.text}>Person 4</div>
+                        </div>
+                    </div> */}
                 </div>
+
             </div>
             <Footer />
         </div>

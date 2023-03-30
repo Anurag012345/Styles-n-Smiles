@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import classes from "./Appointment.module.css"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Multiselect from 'multiselect-react-dropdown';
 
 const Appointment = () => {
     const [date, setDate] = useState(new Date());
@@ -72,41 +73,109 @@ const Appointment = () => {
                     <div className={classes.formGroup}>
                         <label htmlFor="service">Service:
                         </label>
-                        <select id="service" name="service" className="form-control" required>
-                            <option>Select a service</option>
-                            <optgroup label="Facial">
-                                <option value="Herbaline">Herbaline</option>
-                                <option value="Lotus Diamond">Lotus Diamond</option>
-                                <option value="Lotus Gold">Lotus Gold</option>
-                                <option value="Lotus White Glow">Lotus White Glow</option>
-                            </optgroup>
-                            <optgroup label="Spa">
-                                <option value="Keratin">Keratin</option>
-                                <option value="Matrix Spa">Matrix Spa</option>
-                                <option value="Loreal Spa">Loreal Spa</option>
-                            </optgroup>
-                            <optgroup label="Wax">
-                                <option value="Face wax">face wax</option>
-                                <option value="Head wax">Head wax</option>
-                                <option value="Full body wax">Full body wax</option>
-                            </optgroup>
-                            <optgroup label="Manicure-Pedicure">
-                                <option value="Scrub">Scrub</option>
-                                <option value="V.L.CC">V.L.CC</option>
-                                <option value="Scrub + Cream">Scrub + Cream</option>
-                            </optgroup>
-                            <optgroup label="Bleach">
-                                <option value="V.L.C Gold">V.L.C Gold</option>
-                                <option value="V.L.C Diamond">V.L.C Diamond</option>
-                                <option value="Fruit bleech">fruit bleech</option>
-                            </optgroup>
-                            <optgroup label="Massage">
-                                <option value="Papaya">Papaya</option>
-                                <option value="Lotus">Lotus</option>
-                                <option value="Chocolate">Chocolate</option>
-                                <option value="Fruit">Fruit</option>
-                            </optgroup>
-                        </select>
+                        <Multiselect
+                            displayValue="key"
+                            groupBy="cat"
+                            // className="form-control"
+                            onKeyPressFn={function noRefCheck() { }}
+                            onRemove={function noRefCheck() { }}
+                            onSearch={function noRefCheck() { }}
+                            onSelect={function noRefCheck() { }}
+                            options={[
+                                {
+                                    cat: 'Facial',
+                                    key: 'Herbaline'
+                                },
+                                {
+                                    cat: 'Facial',
+                                    key: 'Lotus Diamond'
+                                },
+                                {
+                                    cat: 'Facial',
+                                    key: 'Lotus Gold'
+                                },
+                                {
+                                    cat: 'Facial',
+                                    key: 'Lotus White Glow'
+                                },
+                                {
+                                    cat: 'Spa',
+                                    key: 'Keratin'
+                                },
+                                {
+                                    cat: 'Spa',
+                                    key: 'Matrix Spa'
+                                },
+                                {
+                                    cat: 'Spa',
+                                    key: 'Loreal Spa'
+                                },
+                                {
+                                    cat: 'Wax',
+                                    key: 'Face wax'
+                                },
+                                {
+                                    cat: 'Wax',
+                                    key: 'Head wax'
+                                },
+                                {
+                                    cat: 'Wax',
+                                    key: 'Full body wax'
+                                },
+                                {
+                                    cat: 'Manicure-Pedicure',
+                                    key: 'Scrub'
+                                },
+                                {
+                                    cat: 'Manicure-Pedicure',
+                                    key: 'V.L.CC'
+                                },
+                                {
+                                    cat: 'Manicure-Pedicure',
+                                    key: 'Scrub + Cream'
+                                },
+                                {
+                                    cat: 'Bleach',
+                                    key: 'V.L.C Gold'
+                                },
+                                {
+                                    cat: 'Bleach',
+                                    key: 'V.L.C Diamond'
+                                },
+                                {
+                                    cat: 'Bleach',
+                                    key: 'Fruit bleech'
+                                },
+                                {
+                                    cat: 'Massage',
+                                    key: 'Papaya'
+                                },
+                                {
+                                    cat: 'Massage',
+                                    key: 'Lotus'
+                                },
+                                {
+                                    cat: 'Massage',
+                                    key: 'Chocolate'
+                                },
+                                {
+                                    cat: 'Massage',
+                                    key: 'Fruit'
+                                }
+                            ]}
+                            placeholder="Select Services"
+                            style={{
+                                chips: {
+                                    background: 'black'
+                                },
+                                multiselectContainer: {
+                                    color: 'Black'
+                                },
+                                searchBox: {
+                                    backgroundColor: "white"
+                                }
+                            }}
+                        />
                     </div>
 
                 </div>
