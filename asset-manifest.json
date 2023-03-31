@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Styles-n-Smiles/static/css/main.beceb63c.css",
-    "main.js": "/Styles-n-Smiles/static/js/main.8b44effc.js",
+    "main.js": "/Styles-n-Smiles/static/js/main.448ba6d0.js",
     "static/media/dten.jpg": "/Styles-n-Smiles/static/media/dten.47701e9107f0ad2a7c36.jpg",
     "static/media/haircutting.jpg": "/Styles-n-Smiles/static/media/haircutting.d12e087dc94285d96b37.jpg",
     "static/media/Bridal.jpg": "/Styles-n-Smiles/static/media/Bridal.3b9f5fd263b8a7a1ef6f.jpg",
@@ -53,10 +53,10 @@
     "static/media/foundation.jpeg": "/Styles-n-Smiles/static/media/foundation.21e09dffdf50ae93a019.jpeg",
     "index.html": "/Styles-n-Smiles/index.html",
     "main.beceb63c.css.map": "/Styles-n-Smiles/static/css/main.beceb63c.css.map",
-    "main.8b44effc.js.map": "/Styles-n-Smiles/static/js/main.8b44effc.js.map"
+    "main.448ba6d0.js.map": "/Styles-n-Smiles/static/js/main.448ba6d0.js.map"
   },
   "entrypoints": [
     "static/css/main.beceb63c.css",
-    "static/js/main.8b44effc.js"
+    "static/js/main.448ba6d0.js"
   ]
 }
