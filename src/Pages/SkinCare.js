@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import classes from "./Services.module.css"
 import NavBar from '../Components/navBar'
 import Footer from '../Components/Footer'
@@ -24,7 +25,7 @@ const SkinCare = () => {
                         <br /> At Styles n' Smiles, we offer face clean up options for all skin types. A face scrub to remove any impurities hidden in your pores followed by a face massage nourishes your face from within, giving your skin a Naturals glow! <br />
 
                         <br /> Keep your skin healthy, hydrated and glowing!</p>
-                    <button>View Price</button>
+                    <button><Link to="/price" className={classes.price}>View Price</Link></button>
                 </div>
             </div>
             <div className={classes.services}>
@@ -33,7 +34,7 @@ const SkinCare = () => {
                     <p className={classes.content}>A facial is not just about pampering yourself, it also does wonders for your skin! A facial done by a professional, deep cleans and hydrates your skin as well as relieves acne. A good facial also improves blood circulation, giving your skin a healthy glow. <br />
 
                         <br /> At Styles n' Smiles, our facial options cater to all skin types. We use products containing vital minerals and nutrients that reduce wrinkles and remove dead skin, giving your skin a youthful appearance. Black mud, fruit acids, vitamins, enzymes, gold and anti-oxidants are just a few of the special ingredients found in our facials.</p>
-                    <button>View Price</button>
+                    <button><Link to="/price" className={classes.price}>View Price</Link></button>
                 </div>
                 <div className={classes.right}>
                     <img src={facial} alt="" />
@@ -50,7 +51,7 @@ const SkinCare = () => {
                         <br /> Styles n' Smiles beauty parlour’s skincare professionals bleach your face using techniques that do not damage, harm or change the texture of your skin. A face bleaching done at the Naturals beauty parlour leaves you with skin that is fairer, fresher and flawless! <br />
 
                         <br /> De-tan your face and look as fresh as ever at Naturals!</p>
-                    <button>View Price</button>
+                    <button><Link to="/price" className={classes.price}>View Price</Link></button>
                 </div>
             </div>
             <div className={classes.services}>
@@ -63,7 +64,7 @@ const SkinCare = () => {
                         <br /> Facial mask treatments at Styles n' Smiles will revitalize your skin, leaving you refreshed!
 
                     </p>
-                    <button>View Price</button>
+                    <button><Link to="/price" className={classes.price}>View Price</Link></button>
                 </div>
                 <div className={classes.right}>
                     <img src={facemask} alt="" />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import classes from "./Services.module.css"
 import NavBar from '../Components/navBar'
 import Footer from '../Components/Footer'
@@ -24,7 +25,7 @@ const BodyCare = () => {
                         <br /> The Radiant Manicure is an excellent way to whiten dull or tanned skin. Get rid of unevenly tanned skin with this special manicure. <br />
 
                         <br /> The Intense Moisturizing Manicure is recommended for dry hands. Soak your hands in a special moisturising mixture for soft, beautiful hands. For hands that feel Naturally soft!</p>
-                    <button>View Price</button>
+                    <button><Link to="/price" className={classes.price}>View Price</Link></button>
                 </div>
             </div>
             <div className={classes.services}>
@@ -37,7 +38,7 @@ const BodyCare = () => {
                         <br /> The Spa Pedicure is an all-natural pedicure that uses organic products, which help soothe your nerves that leaves you feeling completely relaxed. <br />
 
                         <br /> Get that pedicure for the feet on the go!</p>
-                    <button>View Price</button>
+                    <button><Link to="/price" className={classes.price}>View Price</Link></button>
                 </div>
                 <div className={classes.right}>
                     <img src={paddicure} alt="" />
@@ -55,7 +56,7 @@ const BodyCare = () => {
                         <br /> Eyebrow threading is performed with consideration for your facial features, and body waxing leaves you with a silky smooth finish. <br />
 
                         <br /> Groom yourself with the comfort of our experts!</p>
-                    <button>View Price</button>
+                    <button><Link to="/price" className={classes.price}>View Price</Link></button>
                 </div>
             </div>
             <div className={classes.services}>
@@ -68,7 +69,7 @@ const BodyCare = () => {
                         <br /> Whether you're looking to unwind after a long day or pamper yourself for a special occasion, their spa services are sure to leave you feeling refreshed and renewed.
 
                     </p>
-                    <button>View Price</button>
+                    <button><Link to="/price" className={classes.price}>View Price</Link></button>
                 </div>
                 <div className={classes.right}>
                     <img src={spa} alt="" />
