@@ -25,7 +25,7 @@ function App() {
           <Route path="/services/bridal" element={<Bridal />} />
           <Route path="/price" element={<Price />} />
           <Route path="/login" element={<Login />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Router>
     </div>
