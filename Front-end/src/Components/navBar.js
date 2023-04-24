@@ -96,7 +96,7 @@ export default function NavBar() {
               </Link>
             </li>
           </ul>
-          {button && <button className="button" onClick={() => navigate("/login")}>
+          {button && <button className="button1" onClick={() => navigate("/login")}>
             Login
           </button>}
         </div>

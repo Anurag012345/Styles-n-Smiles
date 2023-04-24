@@ -23,7 +23,7 @@ import booking from "../Images/Book-Appointment.jpg"
 import ProductSlider from "../Components/ProductSlider";
 import Appointment from "../Components/Appointment";
 
-export default function Home() {
+export default function Home(props) {
   const services = [
     { id: 1, image: bleach, title: "Bleach" },
     { id: 2, image: bridal, title: "Bridal" },
@@ -35,6 +35,9 @@ export default function Home() {
     { id: 8, image: waxing, title: "Waxing" },
 
   ]
+  const handleLogout = () => {
+    props.onSignOut();
+  };
 
   return (
     <div>

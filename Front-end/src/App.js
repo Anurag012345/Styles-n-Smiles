@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
@@ -9,13 +10,19 @@ import SkinCare from "./Pages/SkinCare";
 import BodyCare from "./Pages/BodyCare";
 import Price from "./Pages/Prices";
 import Bridal from "./Pages/Bridal";
-import Login from "./Components/Login";
+import Login from "./Pages/Login";
+import SignUp from "./Pages/SignUp";
 function App() {
+  const [user, setLoginUser] = useState({})
+
+  const handleSignOut = () => {
+    setLoginUser({});
+  };
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exect path="/" element={user && user._id ? <Home user={user} onSignOut={handleSignOut} /> : <Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/services/haircare" element={<Services />} />
@@ -25,6 +32,7 @@ function App() {
           <Route path="/services/bridal" element={<Bridal />} />
           <Route path="/price" element={<Price />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Router>
