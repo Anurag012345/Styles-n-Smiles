@@ -50,9 +50,6 @@ function Login({ setLoginUser }) {
                 navigate('/');
             })
     }
-    // const google = () => {
-    //     axios.get("http://locahost:9002/google/callback", values)
-    // }
 
     return (
         <div className="login">
