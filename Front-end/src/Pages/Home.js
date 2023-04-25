@@ -24,6 +24,7 @@ import ProductSlider from "../Components/ProductSlider";
 import Appointment from "../Components/Appointment";
 
 export default function Home(props) {
+  const { user, onSignOut } = props
   const services = [
     { id: 1, image: bleach, title: "Bleach" },
     { id: 2, image: bridal, title: "Bridal" },
@@ -35,13 +36,10 @@ export default function Home(props) {
     { id: 8, image: waxing, title: "Waxing" },
 
   ]
-  const handleLogout = () => {
-    props.onSignOut();
-  };
 
   return (
     <div>
-      <NavBar />
+      <NavBar user={user} onSignOut={onSignOut} />
       <div>
         <ImageSlider infinite timer={5000} stopOnManual>
           <img src={img1} alt="" />

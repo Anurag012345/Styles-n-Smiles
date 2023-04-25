@@ -95,7 +95,14 @@
 .fa-bars {
   color: white;
 }
-
+.user-info {
+  display: inline;
+  color: white;
+  height: 80px;
+  align-items: center;
+  margin-top: 25px;
+  padding: 0.5rem 1rem;
+}
 .menu-icon {
   display: none;
 }

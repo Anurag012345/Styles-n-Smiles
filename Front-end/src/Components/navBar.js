@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./navBar.css";
 import { Link, useNavigate } from "react-router-dom";
-export default function NavBar() {
+export default function NavBar(props) {
+  const { user, onSignOut } = props
   const [click, setClick] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const [button, setButton] = useState(true)
@@ -96,9 +97,13 @@ export default function NavBar() {
               </Link>
             </li>
           </ul>
-          {button && <button className="button1" onClick={() => navigate("/login")}>
+          {user ? <div className="user-info">Hi, {user.name}</div> : <></>}
+          {button && user ? <button className="button1" onClick={onSignOut}>
+            Log Out
+          </button> : <button className="button1" onClick={() => navigate("/login")}>
             Login
-          </button>}
+          </button>
+          }
         </div>
       </nav>
     </>
