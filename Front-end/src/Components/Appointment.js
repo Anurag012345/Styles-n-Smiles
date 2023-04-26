@@ -3,9 +3,48 @@ import classes from "./Appointment.module.css"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Multiselect from 'multiselect-react-dropdown';
-
+import axios from "axios"
 const Appointment = () => {
+    const [selectedOptions, setSelectedOptions] = useState([]);
     const [date, setDate] = useState(new Date());
+    const [values, setValues] = useState({
+        name: "",
+        email: "",
+        gender: "",
+        phone: "",
+        date: "",
+        service: [],
+        message: "",
+    });
+
+
+    const onChange = (e) => {
+        console.log(values)
+        setValues({ ...values, [e.target.name]: e.target.value });
+    };
+
+    const handleDateChange = (date) => {
+        setDate(date);
+        setValues({
+            ...values,
+            date: date,
+        });
+    };
+    const handleMultiSelectChange = (selectedList, selectedItem) => {
+        setSelectedOptions(selectedList);
+        setValues({
+            ...values,
+            service: selectedList.map((item) => item.key),
+        });
+    };
+
+
+    const Appointment = () => {
+        axios.post("http://localhost:9002/appointments", values)
+            .then(res => {
+                alert(res.data.message)
+            })
+    }
     return (
         <div>
             <h2 className={classes.heading}>Book an Appointment</h2>
@@ -18,6 +57,7 @@ const Appointment = () => {
                             id="name"
                             name="name"
                             className="form-control"
+                            onChange={onChange}
                             required
                         />
                     </div>
@@ -30,6 +70,7 @@ const Appointment = () => {
                             name="email"
                             className="form-control"
                             required
+                            onChange={onChange}
                         />
                     </div>
                 </div>
@@ -37,7 +78,7 @@ const Appointment = () => {
                 <div className={classes.ClearFlix}>
                     <div className={classes.formGroup}>
                         <label htmlFor="gender">Gender: </label>
-                        <select name="gender" id="gender" className="form-control" >
+                        <select name="gender" id="gender" className="form-control" onChange={onChange} >
                             <option>Select Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -52,6 +93,7 @@ const Appointment = () => {
                             name="phone"
                             className="form-control"
                             required
+                            onChange={onChange}
                         />
                     </div>
 
@@ -62,8 +104,9 @@ const Appointment = () => {
                         <label htmlFor="date">Date:</label>
                         <DatePicker
                             id='date'
+                            name='date'
                             selected={date}
-                            onChange={(date) => setDate(date)}
+                            onChange={handleDateChange}
                             showTimeSelect
                             dateFormat="Pp"
                             className="form-control"
@@ -75,12 +118,14 @@ const Appointment = () => {
                         </label>
                         <Multiselect
                             displayValue="key"
+                            name="service"
                             groupBy="cat"
+                            value={selectedOptions}
                             // className="form-control"
                             onKeyPressFn={function noRefCheck() { }}
-                            onRemove={function noRefCheck() { }}
+                            onRemove={(event) => { handleMultiSelectChange(event) }}
                             onSearch={function noRefCheck() { }}
-                            onSelect={function noRefCheck() { }}
+                            onSelect={(event) => { handleMultiSelectChange(event) }}
                             options={[
                                 {
                                     cat: 'Facial',
@@ -182,11 +227,11 @@ const Appointment = () => {
 
                 <div className={classes.formGroup}>
                     <label htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" className="form-control"></textarea>
+                    <textarea id="message" name="message" className="form-control" onChange={onChange}></textarea>
                 </div>
                 <br />
 
-                <button type="submit" className={classes.button}>Book Now</button>
+                <button type="button" className={classes.button} onClick={Appointment}>Book Now</button>
             </form>
         </div>
     )
