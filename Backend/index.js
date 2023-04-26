@@ -31,7 +31,7 @@ const appointment = new mongoose.Schema({
     gender: String,
     phone: Number,
     date: Date,
-    services: [],
+    services: [String],
     message: String,
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 })
@@ -72,6 +72,37 @@ const sendVerifyMail = async (name, email, user_id) => {
 }
 
 
+const sendCofirmationMail = async (name, email, date, services) => {
+    try {
+        const transporter = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 587,
+            secure: false,
+            requireTLS: true,
+            auth: {
+                user: "Rawatanurag362@gmail.com",
+                pass: "vdjpoqteehslcvdg"
+            }
+        })
+        const mailOptions = {
+            from: "rawatanurag362@gmail.com",
+            to: email,
+            subject: "For Confimation Mail",
+            html: '<p>Hii ' + name + ',</p><br><p>This is a confimation mail for your Appointment <br> Your Appointment is schedule at ' + date + ' and your selected services are ' + services + '. </p > '
+        }
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error)
+            } else {
+                console.log("Email has been Send: ", info.response)
+            }
+
+        })
+    } catch (error) {
+        console.log(error.message)
+    }
+}
+
 //Routes
 app.post("/login", async (req, res) => {
     let user = await User.findOne({ email: req.body.email })
@@ -111,22 +142,24 @@ app.post("/sign-in", async (req, res) => {
 
 app.post("/appointments", async (req, res) => {
     let checkuser = await User.findOne({ email: req.body.email })
+    let userId = null;
+    if (checkuser) {
+        userId = checkuser._id;
+    }
     const newappointment = new Appointments({
-        name: req.body.username,
+        name: req.body.name,
         email: req.body.email,
         gender: req.body.gender,
         phone: req.body.phone,
         date: req.body.date,
-        services: req.body.services,
+        services: req.body.service,
         message: req.body.message,
-        if(checkuser) {
-            user: checkuser._id
-        }
+        user: userId
     })
     const appointmentData = await newappointment.save()
 
     if (appointmentData) {
-        // sendVerifyMail(req.body.username, req.body.email, userData._id)
+        sendCofirmationMail(req.body.name, req.body.email, req.body.date, req.body.service)
         res.send({ message: "Registration Successful" })
     }
 })
