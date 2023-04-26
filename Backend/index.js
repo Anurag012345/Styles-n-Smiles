@@ -25,6 +25,20 @@ const userSchema = new mongoose.Schema({
 
 })
 
+const appointment = new mongoose.Schema({
+    name: String,
+    email: String,
+    gender: String,
+    phone: Number,
+    date: Date,
+    services: [],
+    message: String,
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+})
+
+const User = new mongoose.model("User", userSchema)
+const Appointments = new mongoose.model("Appointments", appointment)
+
 //for send mail
 const sendVerifyMail = async (name, email, user_id) => {
     try {
@@ -58,13 +72,12 @@ const sendVerifyMail = async (name, email, user_id) => {
 }
 
 
-const User = new mongoose.model("User", userSchema)
 //Routes
 app.post("/login", async (req, res) => {
     let user = await User.findOne({ email: req.body.email })
     if (user) {
         if (req.body.password === user.password) {
-            res.send({ message: "Login Sucessfull", user: user })
+            res.send({ message: "Login Sucessful", user: user })
         } else {
             res.send({ message: "Password didn't match" })
         }
@@ -94,6 +107,28 @@ app.post("/sign-in", async (req, res) => {
         }
     }
 
+})
+
+app.post("/appointments", async (req, res) => {
+    let checkuser = await User.findOne({ email: req.body.email })
+    const newappointment = new Appointments({
+        name: req.body.username,
+        email: req.body.email,
+        gender: req.body.gender,
+        phone: req.body.phone,
+        date: req.body.date,
+        services: req.body.services,
+        message: req.body.message,
+        if(checkuser) {
+            user: checkuser._id
+        }
+    })
+    const appointmentData = await newappointment.save()
+
+    if (appointmentData) {
+        // sendVerifyMail(req.body.username, req.body.email, userData._id)
+        res.send({ message: "Registration Successful" })
+    }
 })
 
 app.get('/verify', (req, res) => {
