@@ -3,12 +3,12 @@ import styles from './SliderCard.module.css';
 import { Link } from 'react-router-dom';
 import { UseCart } from './CartContext';
 const ProductSliderCard = (props) => {
-    const { id, title, img, price, description } = props;
+    const { id, title, description, price, img, quantity } = props;
 
     const { addItem } = UseCart();
 
     const handleAddToCart = () => {
-        const item = { id, title, img, price, description };
+        const item = { id, title, description, price, img, quantity };
         addItem(item);
     };
 

@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import classes from "./CheckOut.module.css"
+import { useNavigate } from 'react-router-dom';
 import { UseCart } from '../Components/CartContext';
 import axios from 'axios';
 const Checkout = () => {
+    const navigate = useNavigate()
     const { totalAmount } = UseCart()
     const Delivery = 500;
     const totalPayment = totalAmount + Delivery
@@ -12,7 +14,9 @@ const Checkout = () => {
         amount: totalPayment,
     });
 
-    console.log(values)
+    const cart = () => {
+        navigate("/cart")
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,9 +32,6 @@ const Checkout = () => {
                 alert(res.data.message)
             })
     }
-
-
-
 
 
     return (
@@ -73,18 +74,18 @@ const Checkout = () => {
                             </div>
 
                             <button className={classes.btns} onClick={payment}>Purchase</button>
-                            <button className={classes.btns}>Back to cart</button>
+                            <button className={classes.btns} onClick={cart} >Back to cart</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div className={classes.right}>
-                <div>
+                <div className={classes.order}>
                     <h1>Order Summery</h1>
-                    <p>Sub total: {totalAmount}</p>
-                    <p>Delivery Chargers: {Delivery}</p>
+                    <p>Sub total: &nbsp; &#8377;{totalAmount}</p>
+                    <p>Delivery Chargers:&nbsp;  &#8377;{Delivery}</p>
                     <hr />
-                    <p>Total: {totalPayment}</p>
+                    <p>Total:&nbsp;  &#8377;{totalPayment}</p>
                 </div>
             </div>
         </div>
