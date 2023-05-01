@@ -1,8 +1,17 @@
 import React from 'react';
 import styles from './SliderCard.module.css';
-
+import { Link } from 'react-router-dom';
+import { UseCart } from './CartContext';
 const ProductSliderCard = (props) => {
-    const { title, img, price, description } = props;
+    const { id, title, img, price, description } = props;
+
+    const { addItem } = UseCart();
+
+    const handleAddToCart = () => {
+        const item = { id, title, img, price, description };
+        addItem(item);
+    };
+
 
     return (
         <div className={styles.card}>
@@ -13,8 +22,8 @@ const ProductSliderCard = (props) => {
                 <h2 className={styles.title}>{title}</h2>
                 <p className={styles.description}>{description}</p>
                 <p className={styles.price}>&#8377;{price}</p>
-                <button className={styles.button}>Buy Now</button>
-                <button className={styles.button}>View More</button>
+                <button className={styles.button} onClick={handleAddToCart}><Link to="/cart">Buy Now</Link></button>
+                <button className={styles.button} onClick={handleAddToCart}>Add to Cart</button>
 
             </div>
         </div>

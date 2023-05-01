@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./navBar.css";
 import { Link, useNavigate } from "react-router-dom";
+import { UserContext } from "../App";
 export default function NavBar(props) {
-  const { user, onSignOut } = props
+  const { _id, name, handleSignOut } = useContext(UserContext);
+  // const { onSignOut } = props
   const [click, setClick] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const [button, setButton] = useState(true)
@@ -97,8 +99,8 @@ export default function NavBar(props) {
               </Link>
             </li>
           </ul>
-          {user ? <div className="user-info">Hi, {user.name}</div> : <></>}
-          {button && user ? <button className="button1" onClick={onSignOut}>
+          {_id ? <div className="user-info">Hi, {name}</div> : <></>}
+          {button && _id ? <button className="button1" onClick={handleSignOut}>
             Log Out
           </button> : <button className="button1" onClick={() => navigate("/login")}>
             Login

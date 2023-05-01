@@ -43,3 +43,29 @@
 .sign-up {
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .login-form {
+    padding: 0px 30px;
+    height: auto;
+  }
+
+  .button {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-form {
+    padding: 0px 20px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .button {
+    height: 40px;
+    font-size: 16px;
+  }
+}
