@@ -38,7 +38,7 @@ export const products = [
         id: 4,
         title: "Foundation",
         description: "Best foundation ever",
-        price: "90500",
+        price: "499",
         img: pic4,
         quantity: 1,
     },

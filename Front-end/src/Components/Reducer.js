@@ -21,16 +21,30 @@ export const reducer = (state, action) => {
             const updatedItems = [...state.item];
             updatedItems[existingItemIndex] = updatedItem;
 
+            // Calculate the total items and total amount
+            const totalItem = state.totalItem + newItem.quantity;
+            const totalAmount = state.totalAmount + (newItem.price * newItem.quantity);
+
             return {
                 ...state,
                 item: updatedItems,
+                totalItem,
+                totalAmount,
             };
         }
 
-        // If the item is not in the cart, add it to the cart
+        // If the item does not exist in the cart, add the new item to the cart
+        const items = [...state.item, newItem];
+
+        // Calculate the total items and total amount
+        const totalItems = state.totalItems + newItem.quantity;
+        const totalAmount = state.totalAmount + (newItem.price * newItem.quantity);
+
         return {
             ...state,
-            item: [...state.item, newItem],
+            item: items,
+            totalItems,
+            totalAmount,
         };
     }
 
