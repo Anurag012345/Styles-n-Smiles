@@ -165,6 +165,10 @@
     font-size: 1.8rem;
     cursor: pointer;
   }
+  .button1 {
+    display: none;
+    visibility: hidden;
+  }
   .fa-times {
     color: white;
     font-size: 2rem;

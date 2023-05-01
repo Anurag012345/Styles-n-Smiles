@@ -49,3 +49,8 @@
 .swiper-button-next:hover {
   opacity: 1;
 }
+@media (max-width: 768px) {
+  .swiper-slide {
+    margin-top: -80px;
+  }
+}

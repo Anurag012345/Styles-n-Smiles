@@ -36,9 +36,16 @@ const appointment = new mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 })
 
+const contact = new mongoose.Schema({
+    name: String,
+    email: String,
+    phone: Number,
+    message: String
+})
+
 const User = new mongoose.model("User", userSchema)
 const Appointments = new mongoose.model("Appointments", appointment)
-
+const Contact = new mongoose.model("Contact", contact)
 //for send mail
 const sendVerifyMail = async (name, email, user_id) => {
     try {
@@ -161,6 +168,20 @@ app.post("/appointments", async (req, res) => {
     if (appointmentData) {
         sendCofirmationMail(req.body.name, req.body.email, req.body.date, req.body.service)
         res.send({ message: "Registration Successful" })
+    }
+})
+
+app.post('/contactus', async (req, res) => {
+    const newcontact = new Contact({
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        message: req.body.message,
+    })
+    const contactData = await newcontact.save()
+
+    if (contactData) {
+        res.send({ message: "Our team will contact you soon !!!" })
     }
 })
 
