@@ -50,7 +50,7 @@ const Checkout = () => {
                                     <input type="text" name="fname" onChange={onChange} />
                                 </div>
                                 <div>
-                                    <label htmlFor="email">email</label>
+                                    <label htmlFor="email">Email</label>
                                     <input type="email" name="email" onChange={onChange} />
                                 </div>
                             </div>

@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { AiOutlineArrowLeft, AiOutlineShoppingCart } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom'
 import { Scrollbars } from "react-custom-scrollbars-2"
 import Items from '../Components/Items';
 import { UseCart } from '../Components/CartContext';
 import styles from './Cart.module.css';
-
+import { UserContext } from '../App';
 const Cart = () => {
+    const { _id } = useContext(UserContext);
     const navigate = useNavigate()
     const { item, clearCart, totalItem, totalAmount } = UseCart()
 
@@ -15,7 +16,12 @@ const Cart = () => {
     }
 
     const forward = () => {
-        navigate("/checkout")
+        if (_id) {
+            navigate("/checkout")
+        } else {
+            navigate("/login")
+        }
+
     }
 
     if (item.length === 0) {

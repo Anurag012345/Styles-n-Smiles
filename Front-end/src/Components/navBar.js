@@ -2,8 +2,11 @@ import React, { useState, useEffect, useContext } from "react";
 import "./navBar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../App";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { UseCart } from "./CartContext";
 export default function NavBar(props) {
   const { _id, name, handleSignOut } = useContext(UserContext);
+  const { totalItem } = UseCart()
   // const { onSignOut } = props
   const [click, setClick] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
@@ -91,6 +94,12 @@ export default function NavBar(props) {
             <li className="nav-item">
               <Link to="/contactUs" className="nav-links" onClick={closeMobileMenu}>
                 Contact Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/cart" className="nav-links" onClick={closeMobileMenu}>
+                <AiOutlineShoppingCart className="img" />
+                <p className="p">{totalItem}</p>
               </Link>
             </li>
             <li className="nav-item">
