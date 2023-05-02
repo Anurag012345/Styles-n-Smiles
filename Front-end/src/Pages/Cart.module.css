@@ -173,7 +173,7 @@
   display: flex;
   align-items: center;
   text-align: left;
-  color: var(--primary-color);
+  color: black;
 }
 
 .add-minus-quantity {
@@ -192,15 +192,14 @@
 .add-minus-quantity input {
   width: 3rem;
   height: 2rem;
-  border: 0.141rem solid var(--primary-color);
+  border: 0.5px solid black;
   box-sizing: border-box;
   font-style: normal;
   color: #000000;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   text-transform: capitalize;
-  color: var(--primary-color);
+  color: black;
   margin: 0 1rem;
   border-radius: 0.5rem;
   outline: none;
@@ -222,7 +221,7 @@
   font-weight: bold;
   font-size: 1.2rem;
   text-transform: capitalize;
-  color: var(--main-color);
+  color: black;
 }
 
 .remove-item {
@@ -241,14 +240,14 @@
   width: 95%;
   margin-top: 2rem;
   text-align: right;
+  margin-bottom: 2rem;
 }
 
 .cardTotal h3 {
   font-style: 200;
   font-size: 1.2rem;
   line-height: 3.2rem;
-  text-transform: capitalize;
-  color: #606166;
+  color: #000000;
 }
 
 .cardTotal h3 span {
@@ -289,7 +288,7 @@
 
 .fa-plus,
 .fa-minus {
-  color: var(--icon-color);
+  color: black;
 }
 
 .cardTotal .button:hover {
