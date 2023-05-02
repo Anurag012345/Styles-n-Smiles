@@ -6,7 +6,7 @@ import img2 from "../Images/img2.jpg"
 import img3 from "../Images/img3.jpg"
 import classes from "./Home.module.css";
 import Footer from "../Components/Footer";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import bleach from "../Images/bleach.jpg"
 import bridal from "../Images/Bridal.jpg"
 import dten from "../Images/dten.jpg"
@@ -25,6 +25,7 @@ import Appointment from "../Components/Appointment";
 
 export default function Home(props) {
   const { user, onSignOut } = props
+  const navigate = useNavigate()
   const services = [
     { id: 1, image: bleach, title: "Bleach" },
     { id: 2, image: bridal, title: "Bridal" },
@@ -64,10 +65,8 @@ export default function Home(props) {
             We are committed to creating a warm and welcoming atmosphere where our clients can relax and enjoy a pampering experience. Our salon is equipped with modern facilities and we use only the best products to ensure that you leave feeling rejuvenated and confident.
 
             At Styles n' Smiles, we understand that each client is unique and we take the time to listen to your needs and preferences to create a personalized service that meets your expectations. We strive to exceed your expectations with every visit and look forward to welcoming you to our salon.</p>
-          <button className={classes.aboutUsButton}>
-            <Link to="/aboutUs" className={classes.aboutUsButton}>
-              Know More
-            </Link>
+          <button className={classes.aboutUsButton} onClick={() => navigate("/aboutUs")}>
+            Know More
           </button>
         </div>
       </div>

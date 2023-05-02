@@ -35,6 +35,7 @@ p {
 }
 .info {
   font-size: 18px;
+  text-align: justify;
 }
 .aboutUsButton {
   background-color: black;
