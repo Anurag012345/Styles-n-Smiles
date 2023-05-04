@@ -14,7 +14,6 @@ import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Cart from './Pages/Cart';
 import CheckOut from './Pages/Checkout';
-
 import { CartContextProvider } from './Components/CartContext';
 
 export const UserContext = createContext();
