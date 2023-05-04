@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import classes from "./CheckOut.module.css"
 import { useNavigate } from 'react-router-dom';
 import { UseCart } from '../Components/CartContext';
-import axios from 'axios';
+import PopUp from '../Components/PopUp';
+import Payment from '../Components/Payment';
 const Checkout = () => {
+    const [buttonPopup, SetButtonPopup] = useState(false);
     const navigate = useNavigate()
     const { totalAmount } = UseCart()
     const Delivery = 500;
@@ -25,14 +27,6 @@ const Checkout = () => {
     const onChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value });
     };
-
-    const payment = () => {
-        axios.get("http://localhost:9002/paywithpaytm", values)
-            .then(res => {
-                alert(res.data.message)
-            })
-    }
-
 
     return (
         <div className={classes.main}>
@@ -73,7 +67,7 @@ const Checkout = () => {
                                 </div>
                             </div>
 
-                            <button className={classes.btns} onClick={payment}>Purchase</button>
+                            <button className={classes.btns} onClick={() => SetButtonPopup(true)}>Purchase</button>
                             <button className={classes.btns} onClick={cart} >Back to cart</button>
                         </form>
                     </div>
@@ -88,7 +82,15 @@ const Checkout = () => {
                     <p>Total:&nbsp;  &#8377;{totalPayment}</p>
                 </div>
             </div>
+
+            {/* Pop-up Is here  */}
+            <PopUp trigger={buttonPopup} setTrigger={SetButtonPopup}>
+                <Payment />
+            </PopUp>
+
         </div>
+
+
     )
 }
 
