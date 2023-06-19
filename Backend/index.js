@@ -56,7 +56,7 @@ const sendVerifyMail = async (name, email, user_id) => {
             requireTLS: true,
             auth: {
                 user: "Rawatanurag362@gmail.com",
-                pass: "vdjpoqteehslcvdg"
+                pass: "Enter Your Password"
             }
         })
         const mailOptions = {
