@@ -88,7 +88,7 @@ const sendCofirmationMail = async (name, email, date, services) => {
             requireTLS: true,
             auth: {
                 user: "Rawatanurag362@gmail.com",
-                pass: "vdjpoqteehslcvdg"
+                pass: "Enter Your Password"
             }
         })
         const mailOptions = {
