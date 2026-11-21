@@ -1,3 +1,4 @@
+import "dotenv/config"
 import express from "express"
 import cors from "cors"
 import mongoose from "mongoose"
@@ -55,12 +56,12 @@ const sendVerifyMail = async (name, email, user_id) => {
             secure: false,
             requireTLS: true,
             auth: {
-                user: "Rawatanurag362@gmail.com",
-                pass: "***REMOVED***"
+                user: process.env.MAIL_USER,
+                pass: process.env.MAIL_PASS
             }
         })
         const mailOptions = {
-            from: "rawatanurag362@gmail.com",
+            from: process.env.MAIL_USER,
             to: email,
             subject: "For Verification Mail",
             html: '<p>Hii ' + name + ', Please click here http://localhost:3000/verify?id=' + user_id + 'to Verify Your Account</p>'
@@ -87,12 +88,12 @@ const sendCofirmationMail = async (name, email, date, services) => {
             secure: false,
             requireTLS: true,
             auth: {
-                user: "Rawatanurag362@gmail.com",
-                pass: "***REMOVED***"
+                user: process.env.MAIL_USER,
+                pass: process.env.MAIL_PASS
             }
         })
         const mailOptions = {
-            from: "rawatanurag362@gmail.com",
+            from: process.env.MAIL_USER,
             to: email,
             subject: "For Confimation Mail",
             html: '<p>Hii ' + name + ',</p><br><p>This is a confimation mail for your Appointment <br> Your Appointment is schedule at ' + date + ' and your selected services are ' + services + '. </p > '
