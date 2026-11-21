@@ -3,6 +3,7 @@ import express from "express"
 import cors from "cors"
 import mongoose from "mongoose"
 import nodemailer from "nodemailer"
+import bcrypt from "bcryptjs"
 
 const app = express()
 app.use(express.json())
@@ -114,16 +115,22 @@ const sendCofirmationMail = async (name, email, date, services) => {
 //Routes
 app.post("/login", async (req, res) => {
     let user = await User.findOne({ email: req.body.email })
-    if (user) {
-        if (req.body.password === user.password) {
-            res.send({ message: "Login Sucessful", user: user })
-        } else {
-            res.send({ message: "Password didn't match" })
-        }
-    } else {
-        res.send({ message: "User Not Found" })
-    }
+    if (!user) return res.send({ message: "User Not Found" })
 
+    const password = req.body.password
+    const stored = user.password || ""
+    const isHashed = stored.startsWith("$2")
+    // Accounts created before hashing was added still hold plain text; accept once, then upgrade.
+    const ok = typeof password === "string" &&
+        (isHashed ? await bcrypt.compare(password, stored) : password === stored)
+    if (!ok) return res.send({ message: "Password didn't match" })
+
+    if (!isHashed) {
+        user.password = await bcrypt.hash(password, 10)
+        await user.save()
+    }
+    const { password: _omit, ...safeUser } = user.toObject()
+    res.send({ message: "Login Sucessful", user: safeUser })
 })
 
 app.post("/sign-in", async (req, res) => {
@@ -135,7 +142,7 @@ app.post("/sign-in", async (req, res) => {
         const newuser = new User({
             name: req.body.username,
             email: req.body.email,
-            password: req.body.password,
+            password: await bcrypt.hash(String(req.body.password), 10),
             is_verified: false
         })
         const userData = await newuser.save()

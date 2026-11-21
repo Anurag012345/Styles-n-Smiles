@@ -16,7 +16,9 @@ an Express + MongoDB API behind it.
   about and contact pages.
 - **Appointment booking** with date picker and multi-select services; saved to MongoDB
   and followed by a confirmation email.
-- **Accounts:** sign-up with an email verification message, and login.
+- **Accounts:** sign-up with an email verification message, and login. Passwords are
+  hashed with bcrypt; accounts created before hashing was added are upgraded on their
+  next login.
 - **Shop:** product cards, a cart with add, remove and quantity changes (React context
   and reducer), and a checkout page with card and UPI options.
 - **Contact form** saved to MongoDB, with the salon's social links.
@@ -75,8 +77,6 @@ Front-end/   React app (src/Pages, src/Components, src/Images)
 
 This was an early learning project, and these are known gaps:
 
-- **Passwords are stored and compared in plain text.** Do not use real passwords. It
-  needs hashing (for example bcrypt) before any real use.
 - There is no session or token, so login state lives only in the React app's memory.
 - The verification email links to `localhost:3000`, and the checkout does not process
   real payments.
